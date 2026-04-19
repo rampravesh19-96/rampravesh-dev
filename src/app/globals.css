@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+
+  --background: #08090c;
+  --background-elevated: #10131a;
+  --background-panel: #121620;
+  --background-soft: #171c26;
+  --foreground: #f5f7fa;
+  --foreground-muted: #a7afbd;
+  --border-strong: rgba(255, 255, 255, 0.12);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --accent: #7dd3fc;
+  --accent-strong: #38bdf8;
+  --accent-soft: rgba(125, 211, 252, 0.14);
+  --success: #22c55e;
+  --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.28);
+  --shadow-card: 0 24px 80px rgba(0, 0, 0, 0.34);
+  --radius-sm: 14px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
+  --container: 1200px;
+  --space-section: clamp(5rem, 9vw, 8rem);
+  --space-hero-top: clamp(8rem, 12vw, 11rem);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-elevated: var(--background-elevated);
+  --color-background-panel: var(--background-panel);
+  --color-background-soft: var(--background-soft);
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-border-strong: var(--border-strong);
+  --color-border-subtle: var(--border-subtle);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  --color-success: var(--success);
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-heading);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background:
+    radial-gradient(circle at top, rgba(125, 211, 252, 0.08), transparent 28%),
+    linear-gradient(180deg, #0a0d12 0%, #08090c 36%, #08090c 100%);
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(125, 211, 252, 0.08), transparent 18%),
+    radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.04), transparent 20%),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle at center, black 35%, transparent 80%);
+  opacity: 0.28;
+  z-index: -1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  display: block;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid rgba(125, 211, 252, 0.9);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: rgba(125, 211, 252, 0.24);
+  color: var(--foreground);
+}
+
+@utility container-shell {
+  margin-inline: auto;
+  max-width: var(--container);
+  padding-inline: clamp(1.25rem, 3vw, 2rem);
+}
+
+@utility section-shell {
+  padding-block: var(--space-section);
+}
+
+@utility section-divider {
+  position: relative;
+}
+
+@utility section-divider {
+  &::before {
+    content: "";
+    position: absolute;
+    inset-inline: clamp(1.25rem, 3vw, 2rem);
+    top: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.12),
+      transparent
+    );
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --space-section: clamp(4.25rem, 12vw, 5.75rem);
+    --space-hero-top: clamp(7rem, 18vw, 8rem);
+  }
+
+  body::before {
+    opacity: 0.18;
+  }
+}

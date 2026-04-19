@@ -1,0 +1,32 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" rx="40" fill="#0A0E14"/>
+  <rect x="40" y="40" width="1520" height="920" rx="30" fill="#0F141D" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="88" y="88" width="1424" height="72" rx="18" fill="#121A25"/>
+  <circle cx="128" cy="124" r="10" fill="#7DD3FC"/>
+  <rect x="154" y="114" width="220" height="20" rx="10" fill="#EDF2F7" fill-opacity="0.9"/>
+  <rect x="1260" y="108" width="180" height="32" rx="16" fill="#1B2735"/>
+  <rect x="88" y="196" width="880" height="410" rx="28" fill="url(#hero)"/>
+  <rect x="118" y="228" width="240" height="26" rx="13" fill="#F5F7FA" fill-opacity="0.92"/>
+  <rect x="118" y="272" width="360" height="16" rx="8" fill="#C7D2E0" fill-opacity="0.58"/>
+  <rect x="118" y="312" width="166" height="46" rx="23" fill="#7DD3FC" fill-opacity="0.26" stroke="#7DD3FC" stroke-opacity="0.45"/>
+  <rect x="118" y="382" width="214" height="176" rx="24" fill="#131C28"/>
+  <rect x="356" y="382" width="214" height="176" rx="24" fill="#131C28"/>
+  <rect x="594" y="382" width="214" height="176" rx="24" fill="#131C28"/>
+  <rect x="1008" y="196" width="504" height="410" rx="28" fill="#111A25"/>
+  <rect x="1040" y="228" width="188" height="22" rx="11" fill="#F5F7FA" fill-opacity="0.92"/>
+  <rect x="1040" y="282" width="204" height="124" rx="22" fill="#7DD3FC" fill-opacity="0.16"/>
+  <rect x="1266" y="282" width="214" height="124" rx="22" fill="#182230"/>
+  <rect x="1040" y="430" width="440" height="144" rx="22" fill="#0E1621"/>
+  <rect x="88" y="646" width="420" height="256" rx="28" fill="#101722"/>
+  <rect x="540" y="646" width="432" height="256" rx="28" fill="#101722"/>
+  <rect x="1004" y="646" width="508" height="256" rx="28" fill="#101722"/>
+  <text x="118" y="730" fill="#7DD3FC" font-size="26" font-family="Arial, sans-serif" letter-spacing="3">STOREFRONT GRID</text>
+  <text x="570" y="730" fill="#7DD3FC" font-size="26" font-family="Arial, sans-serif" letter-spacing="3">ADMIN ANALYTICS</text>
+  <text x="1036" y="730" fill="#7DD3FC" font-size="26" font-family="Arial, sans-serif" letter-spacing="3">CHECKOUT + ACCOUNT</text>
+  <defs>
+    <linearGradient id="hero" x1="88" y1="196" x2="968" y2="606" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#162537"/>
+      <stop offset="1" stop-color="#0E141D"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,16 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="900" rx="36" fill="#0B0F15"/>
+  <rect x="138" y="88" width="430" height="724" rx="42" fill="#121A25" stroke="rgba(255,255,255,0.1)"/>
+  <rect x="586" y="88" width="676" height="724" rx="30" fill="#101722" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="166" y="122" width="374" height="666" rx="32" fill="#0F151F"/>
+  <rect x="198" y="158" width="142" height="18" rx="9" fill="#F5F7FA" fill-opacity="0.9"/>
+  <rect x="198" y="202" width="310" height="190" rx="28" fill="#7DD3FC" fill-opacity="0.16"/>
+  <rect x="198" y="422" width="310" height="32" rx="16" fill="#F5F7FA" fill-opacity="0.88"/>
+  <rect x="198" y="474" width="310" height="16" rx="8" fill="#C7D2E0" fill-opacity="0.55"/>
+  <rect x="198" y="514" width="310" height="16" rx="8" fill="#C7D2E0" fill-opacity="0.35"/>
+  <rect x="198" y="568" width="310" height="54" rx="27" fill="#7DD3FC" fill-opacity="0.22" stroke="#7DD3FC" stroke-opacity="0.42"/>
+  <rect x="620" y="122" width="608" height="208" rx="28" fill="#131C28"/>
+  <rect x="620" y="362" width="608" height="188" rx="28" fill="#131C28"/>
+  <rect x="620" y="582" width="608" height="176" rx="28" fill="#131C28"/>
+  <text x="620" y="840" fill="#7DD3FC" font-size="24" font-family="Arial, sans-serif" letter-spacing="2.6">SERVICE DETAIL</text>
+</svg>

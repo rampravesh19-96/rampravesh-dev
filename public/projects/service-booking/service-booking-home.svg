@@ -1,0 +1,23 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="900" rx="36" fill="#0B0F15"/>
+  <rect x="98" y="96" width="330" height="708" rx="40" fill="#121A25" stroke="rgba(255,255,255,0.1)"/>
+  <rect x="448" y="96" width="330" height="708" rx="40" fill="#121A25" stroke="rgba(255,255,255,0.1)"/>
+  <rect x="798" y="96" width="504" height="708" rx="32" fill="#101722" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="124" y="130" width="278" height="650" rx="30" fill="#0F151F"/>
+  <rect x="474" y="130" width="278" height="650" rx="30" fill="#0F151F"/>
+  <rect x="160" y="174" width="142" height="18" rx="9" fill="#F5F7FA" fill-opacity="0.92"/>
+  <rect x="160" y="214" width="204" height="42" rx="21" fill="#17212E"/>
+  <rect x="160" y="286" width="206" height="124" rx="24" fill="#7DD3FC" fill-opacity="0.18"/>
+  <rect x="160" y="434" width="206" height="92" rx="22" fill="#17212E"/>
+  <rect x="160" y="544" width="206" height="92" rx="22" fill="#17212E"/>
+  <rect x="510" y="174" width="122" height="18" rx="9" fill="#F5F7FA" fill-opacity="0.92"/>
+  <rect x="510" y="214" width="206" height="42" rx="21" fill="#17212E"/>
+  <rect x="510" y="286" width="206" height="92" rx="22" fill="#17212E"/>
+  <rect x="510" y="396" width="206" height="92" rx="22" fill="#17212E"/>
+  <rect x="510" y="506" width="206" height="92" rx="22" fill="#7DD3FC" fill-opacity="0.16"/>
+  <rect x="834" y="132" width="434" height="72" rx="22" fill="#121C27"/>
+  <rect x="868" y="156" width="192" height="22" rx="11" fill="#7DD3FC" fill-opacity="0.8"/>
+  <rect x="834" y="236" width="434" height="248" rx="28" fill="#131C28"/>
+  <rect x="834" y="516" width="434" height="248" rx="28" fill="#131C28"/>
+  <text x="834" y="840" fill="#7DD3FC" font-size="24" font-family="Arial, sans-serif" letter-spacing="2.6">HOME / DISCOVERY</text>
+</svg>
