@@ -15,7 +15,7 @@ export function SkillsDepthSection() {
           />
         </Reveal>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2">
+        <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {capabilityCards.map((card, index) => (
             <Reveal key={card.title} delay={index * 0.06}>
               <article className="rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-6">

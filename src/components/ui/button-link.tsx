@@ -23,8 +23,7 @@ export function ButtonLink({
       "bg-[linear-gradient(135deg,rgba(125,211,252,0.24),rgba(125,211,252,0.12))] text-white shadow-[0_18px_40px_rgba(56,189,248,0.12)] ring-1 ring-white/12 hover:-translate-y-0.5 hover:ring-white/20",
     secondary:
       "border border-white/12 bg-white/[0.03] text-white hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.05]",
-    ghost:
-      "text-[var(--foreground-muted)] hover:text-white",
+    ghost: "text-[var(--foreground-muted)] hover:text-white",
   };
 
   return (

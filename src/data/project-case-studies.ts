@@ -9,7 +9,10 @@ export type CaseStudySectionItem = {
 };
 
 export type CaseStudyPageContent = {
-  slug: "smart-ecommerce-platform" | "smart-service-booking-app";
+  slug:
+    | "frontend-audit-extension"
+    | "smart-ecommerce-platform"
+    | "smart-service-booking-app";
   title: string;
   eyebrow: string;
   type: string;
@@ -52,171 +55,393 @@ export type CaseStudyPageContent = {
   };
 };
 
+export type HomepageProject = {
+  title: string;
+  slug: string;
+  positioning: string;
+  type: string;
+  proofLabel: string;
+  stack: readonly string[];
+  featureHighlights: readonly string[];
+  preview: {
+    src: string;
+    alt: string;
+    label: string;
+  };
+  links: {
+    live: string;
+    code: string;
+    details?: string;
+  };
+  linkLabels?: {
+    live?: string;
+    code?: string;
+    details?: string;
+  };
+};
+
 export const projectCaseStudies = {
-  "smart-ecommerce-platform": {
-    slug: "smart-ecommerce-platform",
-    title: "Smart Ecommerce Platform with Admin Dashboard",
-    eyebrow: "Web Case Study",
-    type: "Storefront + Admin Dashboard",
-    shortType: "Web Platform",
+  "frontend-audit-extension": {
+    slug: "frontend-audit-extension",
+    title: "Frontend Audit Extension",
+    eyebrow: "Extension Case Study",
+    type: "Chrome Extension Frontend Tool",
+    shortType: "Chrome Extension",
     heroSummary:
-      "A premium ecommerce case study built to show how a polished storefront and a serious admin dashboard can live inside one frontend system.",
+      "Production-style Chrome extension that analyzes live webpages for SEO, accessibility, image, and page structure issues using content scripts and browser APIs.",
     heroSupportingText:
-      "The emphasis is frontend depth: reusable UI systems, responsive commerce surfaces, filters, forms, tables, protected flows, and AI-oriented dashboard cards that feel product-ready instead of decorative.",
+      "This project demonstrates frontend engineering beyond standard web pages: popup UI states, content script execution, browser storage, export flows, and issue reporting designed for real audit workflows inside Chrome.",
     roleLabel: "Frontend Engineer",
-    platformLabel: "Next.js Web App",
+    platformLabel: "React + Vite Chrome Extension",
     visualMode: "web",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "TanStack Query", "Zustand", "MSW"],
+    stack: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Chrome Manifest V3",
+      "Tailwind CSS",
+      "Chrome Storage API",
+      "Content Scripts",
+    ],
     homepagePreview: {
-      src: "/projects/ecommerce/ecommerce-dashboard-hero.svg",
-      alt: "Smart Ecommerce platform preview showing storefront and admin dashboard surfaces",
-      label: "Storefront + Admin",
+      src: "/projects/ecommerce/ecommerce-admin-table.svg",
+      alt: "Frontend Audit Extension preview block used as a neutral placeholder visual",
+      label: "Chrome Web Store",
     },
     mediaGallery: [
       {
-        src: "/projects/ecommerce/ecommerce-dashboard-hero.svg",
-        alt: "Smart Ecommerce dashboard hero view",
-        label: "Homepage Hero",
-        caption: "A premium commerce landing surface introducing storefront depth and admin utility in one product story.",
+        src: "/projects/ecommerce/ecommerce-admin-table.svg",
+        alt: "Frontend Audit Extension placeholder visual for audit dashboard style output",
+        label: "Audit Results",
+        caption: "Placeholder visual block used to keep the case study layout consistent without inventing screenshots.",
       },
       {
         src: "/projects/ecommerce/ecommerce-storefront-grid.svg",
-        alt: "Smart Ecommerce storefront product grid view",
-        label: "Storefront Grid",
-        caption: "Catalog-focused browsing with editorial spacing, product cards, and clear discovery hierarchy.",
+        alt: "Frontend Audit Extension placeholder visual for multi-panel analysis states",
+        label: "Popup States",
+        caption: "Represents the extension focus on loading, empty, saved audit, error, and result states inside the popup UI.",
       },
       {
-        src: "/projects/ecommerce/ecommerce-admin-table.svg",
-        alt: "Smart Ecommerce admin table and analytics view",
-        label: "Admin Table",
-        caption: "Operational dashboard patterns built around data tables, chart context, and AI-oriented insights.",
+        src: "/projects/service-booking/service-booking-flow.svg",
+        alt: "Frontend Audit Extension placeholder visual for structured issue workflows",
+        label: "Issue Workflow",
+        caption: "Used as a neutral visual block for severity-based recommendations, restricted-page handling, and export-ready issue lists.",
       },
       {
-        src: "/projects/ecommerce/ecommerce-checkout-flow.svg",
-        alt: "Smart Ecommerce checkout and account flow preview",
-        label: "Checkout Flow",
-        caption: "Purchase progression and account continuity framed as part of a realistic commerce journey.",
+        src: "/projects/service-booking/service-booking-profile.svg",
+        alt: "Frontend Audit Extension placeholder visual for persisted audit history",
+        label: "Local History",
+        caption: "Illustrates the extension's local history and repeat-audit workflow without claiming unavailable screenshots.",
       },
     ],
     summaryMetrics: [
       {
-        label: "Frontend Focus",
-        value: "Storefront UX and admin tooling designed as one coherent frontend system",
+        label: "Browser API Scope",
+        value: "Content scripts, Chrome storage, export actions, and stateful popup flows inside Manifest V3",
       },
       {
-        label: "System Depth",
-        value: "Reusable shells, route groups, tables, charts, and form-ready workflows",
+        label: "Frontend Breadth",
+        value: "Scoring, issue grouping, restricted-page handling, and polished state management in one tool",
       },
       {
-        label: "Product Lens",
-        value: "Premium product framing without pretending to be a fabricated business success story",
+        label: "Public Proof",
+        value: "Chrome Web Store listing plus public GitHub repository for direct recruiter verification",
       },
     ],
     overview: [
-      "Smart Ecommerce Platform was built as a premium frontend case study to demonstrate how a modern commerce experience can extend from product discovery on the customer side to operational clarity on the admin side.",
-      "The goal was not to claim a fully launched business product. The goal was to show strong frontend architecture, thoughtful UI structure, and the ability to design scalable product surfaces that can grow into real implementation work.",
+      "Frontend Audit Extension is positioned as a production-style browser extension that expands the portfolio beyond standard websites and mobile apps into browser tooling, audit workflows, and extension-specific frontend architecture.",
+      "The project is grounded in real proof links: a public Chrome Web Store listing and a public GitHub repository. The emphasis is on content scripts, browser APIs, audit scoring, and UI states rather than invented business claims.",
     ],
     whatIBuilt: [
       {
-        title: "Customer storefront surface",
+        title: "Popup interface and result states",
         description:
-          "Structured routes for browsing, product discovery, cart, checkout, account areas, and purchase-oriented user journeys.",
+          "A polished popup UI with loading, empty, error, saved audit, and result states to make extension usage feel complete rather than utilitarian.",
       },
       {
-        title: "Admin dashboard foundation",
+        title: "Audit analysis workflow",
         description:
-          "A command-center style backend surface covering analytics, products, orders, customers, inventory, promotions, reviews, and settings.",
+          "Multi-category audit scoring across SEO, accessibility, images, and page structure with severity-based issue recommendations.",
       },
       {
-        title: "Reusable UI patterns",
+        title: "Browser API integration",
         description:
-          "Shared layouts, shells, cards, tables, and mock-ready component surfaces intended for repeated product use instead of one-off page building.",
+          "Chrome Storage API and content script integration for local history, restricted-page handling, and page-level audit execution.",
       },
       {
-        title: "Protected and data-heavy flows",
+        title: "Export-friendly reporting",
         description:
-          "Auth-oriented route separation, form-ready flows, filtering surfaces, and table-based interfaces suited to serious operational tooling.",
+          "JSON and CSV export support for sharing audit findings beyond the extension itself.",
       },
     ],
-    flowSectionTitle: "Key Product Flows",
+    flowSectionTitle: "Audit Workflow Highlights",
     flowSectionDescription:
-      "The value of this project comes from how the product surfaces connect together rather than from one isolated screen.",
+      "The strongest signal here is the combination of browser integration, analysis logic, and user-facing result states inside a compact extension experience.",
     journeyHighlights: [
       {
-        title: "Storefront browsing and discovery",
+        title: "Live page analysis",
         description:
-          "The public-facing experience is structured around category exploration, product detail, cart progression, checkout intent, and account continuity.",
+          "Content scripts analyze the current page for SEO, accessibility, image, and structure issues directly inside the browser context.",
       },
       {
-        title: "Admin product operations",
+        title: "Severity-based recommendations",
         description:
-          "The dashboard side is designed for catalog management, inventory review, and product operations through scalable table and panel patterns.",
+          "Issues are grouped and prioritized so the extension surfaces actionable problems instead of overwhelming the user with raw checks.",
       },
       {
-        title: "Analytics and AI-oriented insights",
+        title: "Restricted-page handling",
         description:
-          "Insight cards and analytics surfaces communicate how operational dashboards can expose performance signals and AI-assisted merchandising cues.",
+          "The extension accounts for pages where audits cannot run normally, which improves credibility compared with a happy-path-only tool.",
       },
       {
-        title: "Responsive cross-surface consistency",
+        title: "Saved audits and exports",
         description:
-          "Both customer and admin experiences are treated as one product system with consistent structure, spacing, and reusable interaction language.",
+          "Local history and JSON or CSV export flows make the tool useful beyond a single one-off scan.",
       },
     ],
     technicalSectionTitle: "Technical Highlights",
     technicalHighlights: [
       {
-        title: "App Router structure",
+        title: "Manifest V3 frontend structure",
         description:
-          "Route groups and segmented layout strategy help separate storefront, auth, and admin concerns while keeping the codebase product-oriented.",
+          "The codebase uses a modern React and Vite setup inside Chrome Manifest V3 constraints, balancing developer experience with extension runtime requirements.",
       },
       {
-        title: "Server-state ready scaffolding",
+        title: "Content script and popup coordination",
         description:
-          "TanStack Query and MSW support a frontend-first workflow where async states and realistic data boundaries can be designed before full backend integration.",
+          "The extension coordinates page analysis and popup display states cleanly so audit results remain understandable and predictable.",
       },
       {
-        title: "Form and dashboard readiness",
+        title: "State persistence with Chrome Storage API",
         description:
-          "The stack selection supports serious product surfaces like validation, tables, charts, and complex CRUD-oriented admin flows.",
+          "Saved audit history and related flows rely on browser-native storage rather than one-session-only state.",
       },
       {
-        title: "Type-safe scaling",
+        title: "Structured exports and UX states",
         description:
-          "TypeScript-first structure keeps shared models, utilities, services, and feature modules aligned as the product surface area grows.",
+          "Export support and deliberate handling of loading, empty, error, and saved states strengthen the product quality of the extension.",
+      },
+    ],
+    decisionsSectionTitle: "Extension UX and Frontend Decisions",
+    architectureDecisions: [
+      {
+        title: "Tooling with a product mindset",
+        description:
+          "The extension is framed as a usable frontend product, not just a technical demo, which is why popup states and issue presentation matter so much.",
+      },
+      {
+        title: "Actionable output over raw scanning",
+        description:
+          "Severity and category framing help the user understand what to fix first instead of reading an unstructured audit dump.",
+      },
+      {
+        title: "Proof anchored in real distribution",
+        description:
+          "The Chrome Web Store listing gives stronger credibility than a local-only extension demo and shows distribution-oriented frontend delivery.",
+      },
+      {
+        title: "Consistent portfolio treatment",
+        description:
+          "Even without bespoke screenshots, the project uses the same case study structure as the other flagship projects to keep the portfolio cohesive.",
+      },
+    ],
+    whyItMatters: [
+      "It expands the portfolio beyond websites into browser extension frontend engineering.",
+      "It shows practical use of browser APIs, content scripts, local persistence, and structured UX states.",
+      "It adds public Chrome Web Store proof that complements the web and mobile projects.",
+    ],
+    links: {
+      live: {
+        label: "View Chrome Web Store Listing",
+        href: "https://chromewebstore.google.com/detail/frontend-audit-extension/epcflhhnpmdmngfaahodceklckhhoeil",
+      },
+      code: {
+        label: "View Source Code",
+        href: "https://github.com/rampravesh19-96/frontend-audit-extension",
+      },
+    },
+    meta: {
+      title: "Frontend Audit Extension Case Study | Ram Pravesh Singh",
+      description:
+        "Case study for a production-style Chrome extension that audits SEO, accessibility, image, and page structure issues using React and TypeScript.",
+    },
+  },
+  "smart-ecommerce-platform": {
+    slug: "smart-ecommerce-platform",
+    title: "Smart Ecommerce Platform & Admin Dashboard",
+    eyebrow: "Web Case Study",
+    type: "Customer Storefront + Role-Based Admin Dashboard",
+    shortType: "Web Platform",
+    heroSummary:
+      "Production-style ecommerce platform with a customer storefront and role-based admin dashboard covering product discovery, checkout, order lifecycle, and admin operations.",
+    heroSupportingText:
+      "Built with reusable frontend architecture for product discovery, product detail, cart, checkout, order history, protected customer flows, protected admin flows, create and edit workflows, typed mock API integrations, and AI-oriented dashboard insight cards.",
+    roleLabel: "Frontend Engineer",
+    platformLabel: "Next.js Web App",
+    visualMode: "web",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "TanStack Query",
+      "Zustand",
+      "React Hook Form",
+      "Zod",
+      "TanStack Table",
+      "Recharts",
+      "MSW",
+      "Vercel",
+    ],
+    homepagePreview: {
+      src: "/projects/ecommerce/ecommerce-dashboard-hero.svg",
+      alt: "Smart Ecommerce platform preview showing storefront and admin dashboard surfaces",
+      label: "Vercel Live Demo",
+    },
+    mediaGallery: [
+      {
+        src: "/projects/ecommerce/ecommerce-dashboard-hero.svg",
+        alt: "Smart Ecommerce dashboard hero view",
+        label: "Platform Overview",
+        caption: "Customer storefront and admin dashboard presented as one coherent frontend system.",
+      },
+      {
+        src: "/projects/ecommerce/ecommerce-storefront-grid.svg",
+        alt: "Smart Ecommerce storefront product grid view",
+        label: "Product Discovery",
+        caption: "Product discovery and product detail surfaces shaped for reusable commerce UI patterns.",
+      },
+      {
+        src: "/projects/ecommerce/ecommerce-admin-table.svg",
+        alt: "Smart Ecommerce admin table and analytics view",
+        label: "Admin Operations",
+        caption: "Operational UI patterns for product workflows, order detail, and status-oriented dashboard work.",
+      },
+      {
+        src: "/projects/ecommerce/ecommerce-checkout-flow.svg",
+        alt: "Smart Ecommerce checkout and account flow preview",
+        label: "Checkout & Orders",
+        caption: "Cart, checkout, order success, and order history treated as one continuous ecommerce journey.",
+      },
+    ],
+    summaryMetrics: [
+      {
+        label: "Commerce Scope",
+        value: "Discovery, checkout, order history, and admin operations in one frontend system",
+      },
+      {
+        label: "Implementation Depth",
+        value: "Forms, tables, charts, protected flows, and typed mock API integrations",
+      },
+      {
+        label: "Public Proof",
+        value: "Vercel live demo plus public GitHub repository for direct recruiter verification",
+      },
+    ],
+    overview: [
+      "Smart Ecommerce Platform & Admin Dashboard mirrors the resume's ecommerce experience: product discovery, protected checkout, post-order visibility, admin workflows, and API-driven commerce interfaces.",
+      "The case study is grounded in implementation quality and proof links rather than inflated outcomes. It combines customer and admin flows, reusable components, typed mock APIs, and a public Vercel deployment backed by source code.",
+    ],
+    whatIBuilt: [
+      {
+        title: "Customer commerce journeys",
+        description:
+          "Product discovery and product detail views, cart, checkout, order success, and order history built as connected customer-facing flows.",
+      },
+      {
+        title: "Protected customer and admin flows",
+        description:
+          "Role-aware flow separation for customer and admin surfaces where authentication and operational access matter.",
+      },
+      {
+        title: "Admin create and update workflows",
+        description:
+          "Admin product create and edit workflows, order detail views, status updates, and operational dashboard surfaces.",
+      },
+      {
+        title: "Typed integration scaffolding",
+        description:
+          "Typed mock API integrations designed to support realistic async states, forms, and dashboard interactions during frontend delivery.",
+      },
+    ],
+    flowSectionTitle: "Key Product Flows",
+    flowSectionDescription:
+      "The strongest signal comes from how ecommerce and admin journeys connect through reusable UI and protected flows.",
+    journeyHighlights: [
+      {
+        title: "Discovery to purchase",
+        description:
+          "The storefront flow moves from product discovery and product detail into cart, checkout, and order success with clear continuity.",
+      },
+      {
+        title: "Order lifecycle visibility",
+        description:
+          "Order history and order detail views extend the project beyond the conversion event into post-order frontend utility.",
+      },
+      {
+        title: "Admin product workflows",
+        description:
+          "Product create and edit workflows demonstrate reusable form patterns and structured data handling in admin surfaces.",
+      },
+      {
+        title: "Dashboard insight surfaces",
+        description:
+          "AI-powered dashboard cards and chart surfaces show how operational interfaces can stay informative without losing clarity.",
+      },
+    ],
+    technicalSectionTitle: "Technical Highlights",
+    technicalHighlights: [
+      {
+        title: "App Router and feature structure",
+        description:
+          "The architecture separates storefront and admin concerns while keeping shared primitives reusable across the platform.",
+      },
+      {
+        title: "Form, table, and chart readiness",
+        description:
+          "React Hook Form, Zod, TanStack Table, and Recharts support data-heavy admin work and structured customer flows.",
+      },
+      {
+        title: "Typed async workflow",
+        description:
+          "TanStack Query and MSW support typed mock API integrations for loading, empty, success, and operational states.",
+      },
+      {
+        title: "Deployment proof",
+        description:
+          "The Vercel-hosted build provides direct public proof for web-focused frontend engineering work.",
       },
     ],
     decisionsSectionTitle: "Architecture and Frontend Decisions",
     architectureDecisions: [
       {
-        title: "Feature-oriented organization over page sprawl",
+        title: "One product system across storefront and admin",
         description:
-          "The structure favors reusable feature modules and shared primitives so storefront and dashboard surfaces can evolve without duplication.",
+          "Customer and admin surfaces are treated as connected product areas rather than separate demos.",
       },
       {
-        title: "Mock-first development for better UI quality",
+        title: "Protected flows as a first-class concern",
         description:
-          "By preparing data handlers and mock service layers early, the frontend can be designed around realistic loading, empty, and operational states.",
+          "Customer and admin experiences both assume authentication-sensitive behavior rather than purely static page design.",
       },
       {
-        title: "Dashboard UX built for scale",
+        title: "Typed mock API-first delivery",
         description:
-          "Tables, filters, charts, and admin navigation patterns were chosen to show operational clarity rather than decorative dashboard aesthetics.",
+          "Mock integration scaffolding makes it easier to design realistic frontend states before backend wiring is complete.",
       },
       {
-        title: "A product-level system, not disconnected screens",
+        title: "Proof over exaggerated claims",
         description:
-          "The strongest frontend signal here is the way customer and admin flows coexist in one coherent product architecture.",
+          "The project emphasizes real links, implementation scope, and frontend architecture instead of invented impact metrics.",
       },
     ],
     whyItMatters: [
-      "It shows the ability to build beyond landing pages and into serious product interface territory.",
-      "It demonstrates frontend architecture thinking through route organization, shared systems, and operational UI depth.",
-      "It communicates readiness for roles that value React, Next.js, TypeScript, admin tooling, and polished product execution.",
+      "It shows frontend depth across customer storefront and admin operations, not just landing-page work.",
+      "It demonstrates reusable UI systems, protected flows, and typed integration patterns aligned with resume experience.",
+      "It adds Vercel-hosted proof for roles centered on React, Next.js, TypeScript, and ecommerce delivery.",
     ],
     links: {
       live: {
-        label: "View Live Platform",
+        label: "View Vercel Live Demo",
         href: "https://smart-ecommerce-admin.vercel.app/",
       },
       code: {
@@ -227,174 +452,189 @@ export const projectCaseStudies = {
     meta: {
       title: "Smart Ecommerce Platform Case Study | Ram Pravesh Singh",
       description:
-        "Case study for a production-style ecommerce frontend with storefront and admin dashboard architecture built using Next.js and TypeScript.",
+        "Case study for a production-style ecommerce platform with storefront and admin dashboard architecture built using Next.js and TypeScript.",
     },
   },
   "smart-service-booking-app": {
     slug: "smart-service-booking-app",
     title: "Smart Service Booking App",
     eyebrow: "Mobile Case Study",
-    type: "React Native Booking Experience",
+    type: "React Native Service Booking Experience",
     shortType: "Mobile App",
     heroSummary:
-      "A mobile-first React Native case study centered on service discovery, booking flow clarity, and the kind of navigation discipline expected in a serious product app.",
+      "Production-style React Native service-booking app with validated auth, home discovery, search, category listing, service detail, reviews, and multi-step booking flow.",
     heroSupportingText:
-      "The experience is intentionally structured around validated auth, search and discovery, service detail, booking progression, history, cancel or reschedule states, notifications, support, and a Smart Service Finder pattern.",
+      "Built with React Native, Expo, TypeScript, TanStack Query, Zustand, React Hook Form, Zod, Expo Secure Store, Expo Image, Reanimated, EAS Build, Google Play Console, and Play Store testing release workflow.",
     roleLabel: "Frontend Engineer",
     platformLabel: "React Native / Expo App",
     visualMode: "mobile",
-    stack: ["React Native", "Expo", "TypeScript", "React Navigation", "Reanimated", "Zustand"],
+    stack: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "React Navigation",
+      "TanStack Query",
+      "Zustand",
+      "React Hook Form",
+      "Zod",
+      "Expo Secure Store",
+      "Expo Image",
+      "Reanimated",
+      "EAS Build",
+      "Google Play Console",
+      "Play Store Testing Release",
+    ],
     homepagePreview: {
       src: "/projects/service-booking/service-booking-home.svg",
       alt: "Smart Service Booking app preview showing discovery and booking screens",
-      label: "Discovery + Booking",
+      label: "Google Play Store",
     },
     mediaGallery: [
       {
         src: "/projects/service-booking/service-booking-home.svg",
         alt: "Smart Service Booking home and discovery screen",
         label: "Discovery Home",
-        caption: "Home and discovery surfaces designed to help mobile users move quickly into the right service flow.",
+        caption: "Home discovery, search, and category listing built for fast mobile browsing and service selection.",
       },
       {
         src: "/projects/service-booking/service-booking-detail.svg",
         alt: "Smart Service Booking service detail screen",
         label: "Service Detail",
-        caption: "Service decision screens that balance information density with mobile clarity.",
+        caption: "Service detail and review screens designed to support confident booking decisions on small screens.",
       },
       {
         src: "/projects/service-booking/service-booking-flow.svg",
         alt: "Smart Service Booking booking flow screen",
         label: "Booking Flow",
-        caption: "Address, slot, summary, and payment progression treated as one streamlined conversion journey.",
+        caption: "Address selection, slot selection, booking summary, and mock payment UX treated as one connected booking journey.",
       },
       {
         src: "/projects/service-booking/service-booking-profile.svg",
         alt: "Smart Service Booking profile and history screen",
-        label: "Profile + History",
-        caption: "History, support, and settings views help the app feel complete beyond the happy path.",
+        label: "History & Profile",
+        caption: "Booking history, cancel or reschedule flows, notifications, support, and profile continuity beyond the initial booking.",
       },
     ],
     summaryMetrics: [
       {
-        label: "Mobile Focus",
-        value: "End-to-end booking UX designed specifically for mobile flow quality",
+        label: "Flow Coverage",
+        value: "Validated auth, discovery, booking, profile, support, and booking lifecycle continuity",
       },
       {
-        label: "Interaction Depth",
-        value: "Onboarding, auth, booking draft, history, profile, and modal-based support patterns",
+        label: "Release Workflow",
+        value: "Expo EAS Build plus Google Play Console testing release path",
       },
       {
-        label: "Frontend Signal",
-        value: "Shows strong navigation design and app-structured thinking beyond isolated screens",
+        label: "Public Proof",
+        value: "Google Play Store listing plus public GitHub repository",
       },
     ],
     overview: [
-      "Smart Service Booking App was designed as a mobile-first case study to show how a service marketplace experience can feel structured, clear, and trustworthy across the full booking journey.",
-      "The focus here is not inflated business claims. The focus is the frontend quality of the app itself: navigation design, state handling, booking steps, and the kind of UX sequencing expected in a serious React Native product.",
+      "Smart Service Booking App is a production-style React Native project that demonstrates mobile frontend ownership across validated auth, booking flow orchestration, account continuity, and release-oriented delivery.",
+      "The proof is grounded in real public links: a Google Play Store listing and a public GitHub repository. The emphasis stays on mobile UX flow quality, form handling, state management, and release workflow credibility.",
     ],
     whatIBuilt: [
       {
-        title: "Validated onboarding and auth flow",
+        title: "Validated auth and onboarding flow",
         description:
-          "A mobile entry sequence covering onboarding, login, OTP verification, and the transition into the main application shell.",
+          "Onboarding, login, OTP verification, and authenticated entry into the application shell.",
       },
       {
-        title: "Service discovery and detail surfaces",
+        title: "Discovery and service detail surfaces",
         description:
-          "Home, search, category listing, and service detail screens built to support decision-making on a small screen without losing clarity.",
+          "Home discovery, search, category listing, service detail, and reviews built for mobile-first decision making.",
       },
       {
-        title: "Booking flow orchestration",
+        title: "Multi-step booking orchestration",
         description:
-          "Address selection, slot picking, booking summary, payment method, and success screens treated as one smooth multi-step journey.",
+          "Address selection, slot selection, booking summary, and mock payment UX connected into one clear booking flow.",
       },
       {
-        title: "Post-booking account experience",
+        title: "Post-booking continuity",
         description:
-          "Booking history, detail views, cancel and reschedule patterns, notifications, profile, settings, and support routes.",
+          "Booking success, history, cancel or reschedule flows, profile, settings, notifications, and support screens.",
       },
     ],
     flowSectionTitle: "Booking Journey Highlights",
     flowSectionDescription:
-      "The strongest mobile work here is the flow continuity from discovery to service completion support.",
+      "The strongest signal here is the continuity from service discovery into booking and then into account-state support.",
     journeyHighlights: [
       {
-        title: "Search and Smart Service Finder",
+        title: "Discovery and Smart Service Finder",
         description:
-          "Discovery is not reduced to a single list. The app structure supports search intent, categories, and filtered movement toward the right service.",
+          "The app supports home discovery, search intent, categories, reviews, and AI-powered Smart Service Finder guidance.",
       },
       {
-        title: "Service decision to booking conversion",
+        title: "Address and slot selection",
         description:
-          "The journey from service detail to address, slot, summary, and payment is designed as a coherent mobile funnel rather than disconnected pages.",
+          "Booking progression handles address and slot selection clearly so the service decision turns into a structured conversion flow.",
       },
       {
-        title: "Booking trust after confirmation",
+        title: "Booking summary and confirmation",
         description:
-          "History, detail, cancel, and reschedule states help the app feel complete and trustworthy after the initial conversion moment.",
+          "Summary, mock payment UX, and success states are designed as one uninterrupted booking journey.",
       },
       {
-        title: "Support and profile continuity",
+        title: "History, reschedule, and support",
         description:
-          "Notifications, help, settings, and profile routes give the application the depth of a real app ecosystem instead of a demo-only shell.",
+          "History, cancel or reschedule flows, notifications, support, and profile routes make the app feel complete after the initial booking.",
       },
     ],
     technicalSectionTitle: "Technical Highlights",
     technicalHighlights: [
       {
-        title: "Navigation architecture for real app scale",
+        title: "Navigation and state architecture",
         description:
-          "Root stacks, auth flows, tab shells, nested routes, and modal patterns were chosen to reflect how serious mobile products are structured.",
+          "React Navigation, Zustand, and TanStack Query support structured app flows, persisted state, and backend-ready async data handling.",
       },
       {
-        title: "Theme and token discipline",
+        title: "Typed forms and validation",
         description:
-          "Shared theme tokens for spacing, typography, radius, shadows, and colors make the app easier to scale without visual drift.",
+          "React Hook Form and Zod support validated user input across auth and booking steps.",
       },
       {
-        title: "State and async readiness",
+        title: "Secure and release-oriented tooling",
         description:
-          "Zustand and TanStack Query prepare the app for booking draft persistence, session state, and backend-connected service data.",
+          "Expo Secure Store, Expo Image, Reanimated, EAS Build, and Google Play Console workflow improve practical delivery credibility.",
       },
       {
-        title: "Mobile interaction polish",
+        title: "Play Store as primary proof",
         description:
-          "Reanimated, gesture tooling, and Expo-native utilities support the kind of touch-first experience expected from a strong React Native build.",
+          "The Google Play Store listing provides stronger public proof than an internal build link and better matches recruiter expectations.",
       },
     ],
-    decisionsSectionTitle: "Mobile UX and Navigation Decisions",
+    decisionsSectionTitle: "Mobile UX and Frontend Decisions",
     architectureDecisions: [
       {
-        title: "Flows designed for small-screen clarity",
+        title: "Mobile-first flow clarity",
         description:
-          "Each step is structured to keep cognitive load low while still exposing the information needed to make a booking decision confidently.",
+          "Each step keeps the booking process understandable while still exposing the information needed to make a confident decision.",
       },
       {
-        title: "Navigation built around user intent",
+        title: "User-intent-based navigation",
         description:
-          "The separation of auth, app shell, booking journeys, and modals reflects how users actually move through a service-booking product.",
+          "Auth, discovery, booking, history, support, and profile areas are structured around how users actually move through the app.",
       },
       {
-        title: "Account depth beyond the happy path",
+        title: "Release-oriented framing",
         description:
-          "By including booking history, reschedule, cancel, and support patterns, the app demonstrates a more complete product mindset.",
+          "The case study emphasizes Play Store and EAS release workflow proof instead of relying on build-only credibility.",
       },
       {
-        title: "Architecture that can absorb real data later",
+        title: "Full lifecycle coverage",
         description:
-          "The scaffolding supports progression from polished prototype structure to real implementation without needing to rebuild core flow logic.",
+          "The app includes booking confirmation, history, and follow-up states so it reads as a complete product flow rather than a short demo.",
       },
     ],
     whyItMatters: [
-      "It highlights React Native strength through full user-journey design, not just individual screens.",
-      "It shows product-minded thinking around booking confidence, mobile usability, and navigation clarity.",
-      "It positions the work well for roles that value cross-platform frontend ownership and high-quality app UX.",
+      "It shows React Native frontend depth through full booking lifecycle coverage rather than isolated screens.",
+      "It demonstrates mobile product flow quality, form handling, state orchestration, and release workflow discipline.",
+      "It adds Google Play Store proof that complements the web and extension projects in the portfolio.",
     ],
     links: {
       live: {
-        label: "View Demo Build",
-        href: "https://expo.dev/accounts/rams1996/projects/smart-service-booking-app/builds/c8f269e2-efea-41a3-93b3-964b241c956c",
+        label: "View Google Play Store Listing",
+        href: "https://play.google.com/store/apps/details?id=com.rampravesh.smartservicebookingapp",
       },
       code: {
         label: "View Source Code",
@@ -404,39 +644,100 @@ export const projectCaseStudies = {
     meta: {
       title: "Smart Service Booking App Case Study | Ram Pravesh Singh",
       description:
-        "Case study for a production-style React Native service booking app focused on mobile UX, navigation flow, and booking lifecycle design.",
+        "Case study for a production-style React Native service booking app focused on validated flows, booking lifecycle quality, and Play Store-ready delivery.",
     },
   },
 } as const satisfies Record<string, CaseStudyPageContent>;
 
-export const projectCaseStudyList = Object.values(projectCaseStudies);
+export const projectCaseStudyList = [
+  projectCaseStudies["frontend-audit-extension"],
+  projectCaseStudies["smart-ecommerce-platform"],
+  projectCaseStudies["smart-service-booking-app"],
+];
 
-export const featuredProjects = projectCaseStudyList.map((project) => ({
-  title: project.title,
-  slug: project.slug,
-  positioning: project.heroSummary,
-  type: project.shortType,
-  stack: project.stack.slice(0, 4),
-  preview: project.homepagePreview,
-  links: {
-    live: project.links.live.href,
-    code: project.links.code.href,
-    details: `/projects/${project.slug}`,
+export const featuredProjects = [
+  {
+    title: projectCaseStudies["frontend-audit-extension"].title,
+    slug: projectCaseStudies["frontend-audit-extension"].slug,
+    positioning: projectCaseStudies["frontend-audit-extension"].heroSummary,
+    type: projectCaseStudies["frontend-audit-extension"].shortType,
+    proofLabel: "Chrome Web Store",
+    stack: projectCaseStudies["frontend-audit-extension"].stack,
+    featureHighlights: [
+      "Multi-category audit scoring",
+      "Severity-based issue recommendations",
+      "Restricted-page handling",
+      "Local audit history with Chrome Storage API",
+      "JSON/CSV report export",
+      "Polished popup UI with loading, empty, error, saved audit, and result states",
+    ],
+    preview: projectCaseStudies["frontend-audit-extension"].homepagePreview,
+    links: {
+      live: projectCaseStudies["frontend-audit-extension"].links.live.href,
+      code: projectCaseStudies["frontend-audit-extension"].links.code.href,
+      details: `/projects/${projectCaseStudies["frontend-audit-extension"].slug}`,
+    },
+    linkLabels: {
+      live: "Chrome Web Store",
+      code: "GitHub",
+      details: "Case Study",
+    },
   },
-})) as readonly {
-  title: string;
-  slug: string;
-  positioning: string;
-  type: string;
-  stack: readonly string[];
-  preview: {
-    src: string;
-    alt: string;
-    label: string;
-  };
-  links: {
-    live: string;
-    code: string;
-    details: string;
-  };
-}[];
+  {
+    title: projectCaseStudies["smart-ecommerce-platform"].title,
+    slug: projectCaseStudies["smart-ecommerce-platform"].slug,
+    positioning: projectCaseStudies["smart-ecommerce-platform"].heroSummary,
+    type: projectCaseStudies["smart-ecommerce-platform"].shortType,
+    proofLabel: "Vercel Live Demo",
+    stack: projectCaseStudies["smart-ecommerce-platform"].stack,
+    featureHighlights: [
+      "Product discovery and product detail views",
+      "Cart, checkout, order success, and order history",
+      "Protected customer and admin flows",
+      "Admin product create/edit workflows",
+      "Admin order detail and status updates",
+      "Typed mock API integrations",
+      "AI-powered dashboard insight cards",
+    ],
+    preview: projectCaseStudies["smart-ecommerce-platform"].homepagePreview,
+    links: {
+      live: projectCaseStudies["smart-ecommerce-platform"].links.live.href,
+      code: projectCaseStudies["smart-ecommerce-platform"].links.code.href,
+      details: `/projects/${projectCaseStudies["smart-ecommerce-platform"].slug}`,
+    },
+    linkLabels: {
+      live: "Vercel Live Demo",
+      code: "GitHub",
+      details: "Case Study",
+    },
+  },
+  {
+    title: projectCaseStudies["smart-service-booking-app"].title,
+    slug: projectCaseStudies["smart-service-booking-app"].slug,
+    positioning: projectCaseStudies["smart-service-booking-app"].heroSummary,
+    type: projectCaseStudies["smart-service-booking-app"].shortType,
+    proofLabel: "Google Play Store",
+    stack: projectCaseStudies["smart-service-booking-app"].stack,
+    featureHighlights: [
+      "Validated auth and onboarding flow",
+      "Home discovery, search, category listing, and service detail",
+      "Address selection and slot selection",
+      "Booking summary and mock payment UX",
+      "Booking success, booking history, cancel/reschedule flows",
+      "Profile/settings, notifications, and support screens",
+      "AI-powered Smart Service Finder",
+      "Released through Google Play Console testing using Expo EAS Build and Play Store release workflow",
+    ],
+    preview: projectCaseStudies["smart-service-booking-app"].homepagePreview,
+    links: {
+      live: projectCaseStudies["smart-service-booking-app"].links.live.href,
+      code: projectCaseStudies["smart-service-booking-app"].links.code.href,
+      details: `/projects/${projectCaseStudies["smart-service-booking-app"].slug}`,
+    },
+    linkLabels: {
+      live: "Google Play Store",
+      code: "GitHub",
+      details: "Case Study",
+    },
+  },
+] as const satisfies readonly HomepageProject[];

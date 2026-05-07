@@ -16,10 +16,10 @@ export function ContactCtaSection() {
                   Recruiter Contact
                 </p>
                 <h2 className="mt-4 max-w-2xl font-heading text-3xl leading-tight tracking-[-0.04em] text-white sm:text-4xl">
-                  Open to frontend roles where product quality, UI craft, and scalable delivery all matter.
+                  Open to Frontend Engineer / React.js / Next.js / React Native roles focused on product-quality UI, scalable frontend systems, and web/mobile delivery.
                 </h2>
                 <p className="mt-5 max-w-2xl text-base leading-7 text-[var(--foreground-muted)] sm:text-lg">
-                  If the work aligns, the fastest next step is simple: review the projects, download the resume, or reach out directly by email or LinkedIn.
+                  If the experience aligns, the fastest next step is simple: review the projects, download the resume, or reach out directly by email, LinkedIn, or GitHub.
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-4">

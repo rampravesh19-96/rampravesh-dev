@@ -22,7 +22,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: `${siteProfile.name} | ${siteProfile.role}`,
   description:
-    "Ram Pravesh Singh is a frontend engineer specializing in React.js, React Native, Next.js, and TypeScript with a premium portfolio focused on product-quality web and mobile experiences.",
+    "Ram Pravesh Singh is a Frontend Engineer with 4+ years of experience building production-ready web and mobile applications using React.js, Next.js, React Native, TypeScript, and Tailwind CSS.",
   metadataBase: new URL(siteProfile.portfolio),
   alternates: {
     canonical: siteProfile.portfolio,
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${siteProfile.name} | ${siteProfile.role}`,
     description:
-      "Frontend-first engineer building polished, scalable product experiences across web and mobile.",
+      "Frontend Engineer building production-ready React, Next.js, and React Native applications.",
     type: "website",
     url: siteProfile.portfolio,
     siteName: `${siteProfile.name} Portfolio`,
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${siteProfile.name} | ${siteProfile.role}`,
     description:
-      "Frontend-first engineer building polished, scalable product experiences across web and mobile.",
+      "Frontend Engineer building production-ready React, Next.js, and React Native applications.",
     images: [`${siteProfile.portfolio}/opengraph-image`],
   },
 };

@@ -4,6 +4,7 @@ import { CredibilityStripSection } from "@/sections/home/credibility-strip-secti
 import { ExperienceSnapshotSection } from "@/sections/home/experience-snapshot-section";
 import { HeroSection } from "@/sections/home/hero-section";
 import { AboutWorkingStyleSection } from "@/sections/home/about-working-style-section";
+import { OpenSourceSection } from "@/sections/home/open-source-section";
 import { SelectedWorkSection } from "@/sections/home/selected-work-section";
 import { SkillsDepthSection } from "@/sections/home/skills-depth-section";
 
@@ -15,6 +16,7 @@ export default function Home() {
       <CredibilityStripSection />
       <ExperienceSnapshotSection />
       <SkillsDepthSection />
+      <OpenSourceSection />
       <AboutWorkingStyleSection />
       <ContactCtaSection />
     </SiteShell>

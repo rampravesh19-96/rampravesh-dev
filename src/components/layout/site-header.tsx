@@ -9,6 +9,7 @@ import { siteProfile } from "@/data/site-content";
 const navItems = [
   { label: "Work", href: "/#work" },
   { label: "Experience", href: "/#experience" },
+  { label: "GitHub", href: "/#open-source" },
   { label: "About", href: "/#about" },
   { label: "Contact", href: "/#contact" },
 ] as const;

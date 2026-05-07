@@ -11,8 +11,8 @@ export function SelectedWorkSection() {
         <Reveal>
           <SectionHeading
             eyebrow="Selected Work"
-            title="Two flagship case studies showing frontend depth across web and mobile product work."
-            description="Each project now carries stronger media framing, sharper ownership language, and a direct path from preview to deeper case study."
+            title="Selected projects across React Native, Chrome extension tooling, and Next.js product delivery."
+            description="Each card highlights concrete frontend scope, proof links, and the flows that matter most in hiring conversations."
           />
         </Reveal>
 

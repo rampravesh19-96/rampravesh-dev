@@ -10,8 +10,8 @@ export function ExperienceSnapshotSection() {
         <Reveal>
           <SectionHeading
             eyebrow="Experience Snapshot"
-            title="Experience shaped around frontend ownership, product flows, and production-minded delivery."
-            description="A concise recruiter scan of the environments where web, mobile, reusable UI systems, and conversion-critical flows have mattered most."
+            title="Experience aligned with frontend ownership across reusable systems, product flows, and API-driven delivery."
+            description="A concise recruiter view of the companies, timelines, and frontend responsibilities reflected in the latest resume."
           />
         </Reveal>
 
@@ -24,6 +24,7 @@ export function ExperienceSnapshotSection() {
                     <p className="font-heading text-xl tracking-[-0.03em] text-white">
                       {item.company}
                     </p>
+                    <p className="mt-2 text-sm text-white/80">{item.role}</p>
                     <p className="mt-2 font-mono text-xs uppercase tracking-[0.22em] text-accent">
                       {item.period}
                     </p>

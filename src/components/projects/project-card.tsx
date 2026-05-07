@@ -9,7 +9,9 @@ type ProjectCardProps = {
   title: string;
   positioning: string;
   type: string;
+  proofLabel: string;
   stack: readonly string[];
+  featureHighlights: readonly string[];
   preview: {
     src: string;
     alt: string;
@@ -18,7 +20,12 @@ type ProjectCardProps = {
   links: {
     live: string;
     code: string;
-    details: string;
+    details?: string;
+  };
+  linkLabels?: {
+    live?: string;
+    code?: string;
+    details?: string;
   };
   accent?: "blue" | "neutral";
 };
@@ -27,11 +34,20 @@ export function ProjectCard({
   title,
   positioning,
   type,
+  proofLabel,
   stack,
+  featureHighlights,
   preview,
   links,
+  linkLabels,
   accent = "blue",
 }: ProjectCardProps) {
+  const titleContent = (
+    <h3 className="mt-4 max-w-xl font-heading text-2xl leading-tight tracking-[-0.04em] text-white transition-colors group-hover:text-white/88">
+      {title}
+    </h3>
+  );
+
   return (
     <motion.article
       whileHover={{ y: -6 }}
@@ -47,17 +63,17 @@ export function ProjectCard({
       <div className="relative flex h-full flex-col">
         <div className="flex items-start justify-between gap-4">
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.24em] text-accent">
-              {type}
-            </p>
-            <Link href={links.details} className="block">
-              <h3 className="mt-4 max-w-xl font-heading text-2xl leading-tight tracking-[-0.04em] text-white transition-colors group-hover:text-white/88">
-                {title}
-              </h3>
-            </Link>
+            <p className="font-mono text-xs uppercase tracking-[0.24em] text-accent">{type}</p>
+            {links.details ? (
+              <Link href={links.details} className="block">
+                {titleContent}
+              </Link>
+            ) : (
+              titleContent
+            )}
           </div>
           <span className="hidden rounded-full border border-white/12 bg-white/[0.03] px-3 py-1 text-xs text-[var(--foreground-muted)] sm:inline-flex">
-            Featured
+            {proofLabel}
           </span>
         </div>
 
@@ -84,7 +100,7 @@ export function ProjectCard({
               <div className="flex items-center justify-between gap-3">
                 <p className="text-sm font-semibold text-white">Stack Highlights</p>
                 <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--foreground-muted)]">
-                  {type}
+                  {proofLabel}
                 </span>
               </div>
               <div className="mt-4 flex flex-wrap gap-2">
@@ -97,17 +113,29 @@ export function ProjectCard({
                   </span>
                 ))}
               </div>
+
+              <div className="mt-6">
+                <p className="text-sm font-semibold text-white">Key Features</p>
+                <ul className="mt-3 space-y-2">
+                  {featureHighlights.map((item) => (
+                    <li key={item} className="text-sm leading-6 text-[var(--foreground-muted)]">
+                      <span className="mr-2 text-accent">•</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
-                aria-label={`Open live preview for ${title}`}
+                aria-label={`Open proof for ${title}`}
                 href={links.live}
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 text-sm text-white transition-all hover:-translate-y-0.5 hover:bg-white/[0.09]"
               >
-                Live Preview
+                {linkLabels?.live ?? "Live Preview"}
               </Link>
               <Link
                 aria-label={`Open source code for ${title}`}
@@ -116,14 +144,16 @@ export function ProjectCard({
                 rel="noreferrer"
                 className="rounded-full border border-white/10 px-4 py-2 text-sm text-[var(--foreground-muted)] transition-all hover:-translate-y-0.5 hover:text-white"
               >
-                View Code
+                {linkLabels?.code ?? "View Code"}
               </Link>
-              <Link
-                href={links.details}
-                className="rounded-full border border-white/10 px-4 py-2 text-sm text-[var(--foreground-muted)] transition-all hover:-translate-y-0.5 hover:text-white"
-              >
-                View Case Study
-              </Link>
+              {links.details ? (
+                <Link
+                  href={links.details}
+                  className="rounded-full border border-white/10 px-4 py-2 text-sm text-[var(--foreground-muted)] transition-all hover:-translate-y-0.5 hover:text-white"
+                >
+                  {linkLabels?.details ?? "View Case Study"}
+                </Link>
+              ) : null}
             </div>
           </div>
         </div>

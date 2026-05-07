@@ -89,7 +89,11 @@ export function CaseStudyHero({ project }: CaseStudyHeroProps) {
             <div className="absolute -left-8 top-12 size-36 rounded-full bg-accent/12 blur-3xl" />
             <div className="rounded-[36px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] p-5 shadow-[var(--shadow-card)]">
               <div className="grid gap-4 rounded-[30px] border border-white/8 bg-black/20 p-4">
-                <div className={project.visualMode === "web" ? "grid gap-4" : "grid gap-4 sm:grid-cols-2"}>
+                <div
+                  className={
+                    project.visualMode === "web" ? "grid gap-4" : "grid gap-4 sm:grid-cols-2"
+                  }
+                >
                   {project.mediaGallery.slice(0, 2).map((item, index) => (
                     <ProjectMediaFrame
                       key={item.src}

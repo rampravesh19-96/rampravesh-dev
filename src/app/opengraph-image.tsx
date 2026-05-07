@@ -57,11 +57,9 @@ export default function OpenGraphImage() {
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-          <div style={{ fontSize: 82, fontWeight: 700, lineHeight: 0.95 }}>
-            {siteProfile.name}
-          </div>
+          <div style={{ fontSize: 82, fontWeight: 700, lineHeight: 0.95 }}>{siteProfile.name}</div>
           <div style={{ fontSize: 34, color: "rgba(245,247,250,0.9)" }}>
-            Frontend-first engineer building polished, scalable product experiences across web and mobile.
+            Frontend Engineer building production-ready React, Next.js, and React Native applications.
           </div>
         </div>
 

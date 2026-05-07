@@ -8,7 +8,7 @@ export function SiteFooter() {
       <Container className="flex flex-col gap-5 text-sm text-[var(--foreground-muted)] sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="font-heading text-white">Ram Pravesh Singh</p>
-          <p>Frontend Engineer building premium web and mobile experiences.</p>
+          <p>Frontend Engineer building production-ready web and mobile applications.</p>
         </div>
         <div className="flex flex-wrap gap-5">
           <Link href={contactLinks.github.href} target="_blank" rel="noreferrer">
@@ -16,6 +16,9 @@ export function SiteFooter() {
           </Link>
           <Link href={contactLinks.linkedin.href} target="_blank" rel="noreferrer">
             LinkedIn
+          </Link>
+          <Link href={contactLinks.leetcode.href} target="_blank" rel="noreferrer">
+            LeetCode
           </Link>
           <Link href={contactLinks.email.href}>Email</Link>
           <Link href={contactLinks.resume.href}>Resume</Link>

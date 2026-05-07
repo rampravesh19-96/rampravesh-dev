@@ -52,6 +52,9 @@ export function HeroSection() {
               <ButtonLink href={heroContent.secondaryCta.href} variant="secondary">
                 {heroContent.secondaryCta.label}
               </ButtonLink>
+              <ButtonLink href={heroContent.tertiaryCta.href} variant="secondary" external>
+                {heroContent.tertiaryCta.label}
+              </ButtonLink>
             </div>
           </motion.div>
 
